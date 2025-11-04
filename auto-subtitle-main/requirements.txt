@@ -1,0 +1,7 @@
+openai-whisper
+transformers
+sentencepiece
+sacremoses
+torch
+# IndexTTS2 will be installed separately via uv from GitHub
+# See INDEXTTS2_INTEGRATION.md for installation instructions

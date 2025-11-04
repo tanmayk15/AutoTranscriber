@@ -69,21 +69,14 @@ frontend/public/outputs/*
 
 # FFmpeg (large binary)
 ffmpeg-8.0-full_build/
+**/ffmpeg-8.0-full_build/
 
-# IndexTTS checkpoints (large model files)
-index-tts/
-auto-subtitle-main/
+# IndexTTS and model files (large)
 index-tts/checkpoints/
 index-tts/.venv/
 index-tts/examples/*.wav
-
-# Auto-subtitle videos
-auto-subtitle-main/*.mp4
-auto-subtitle-main/*.srt
-auto-subtitle-main/*.vtt
-auto-subtitle-main/*.wav
+auto-subtitle-main/checkpoints/
 
 # Huggingface cache (large model files)
-checkpoints/
-**/checkpoints/
 frontend/checkpoints/
+frontend/lib/
