@@ -2,8 +2,6 @@
 
 <div align="center">
 
-![AutoTranscriber Banner](./content_00b9b1be-8adf-4306-89a7-840467f53c21-3.png)
-
 **AI-Powered Video Subtitle Generation, Translation & Voice Cloning System**
 
 [![Next.js](https://img.shields.io/badge/Next.js-14-black)](https://nextjs.org/)
