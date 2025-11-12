@@ -12,6 +12,7 @@ interface DownloadSectionProps {
     translatedSrtPath?: string
     translatedBurnedVideoPath?: string
     ttsAudioPath?: string
+    ttsVideoPath?: string
   }
 }
 
@@ -91,10 +92,21 @@ export default function DownloadSection({ outputs }: DownloadSectionProps) {
           <Button
             variant="outline"
             className="w-full justify-start"
-            onClick={() => handleDownload(outputs.ttsAudioPath!, "tts_audio.mp3")}
+            onClick={() => handleDownload(outputs.ttsAudioPath!, "tts_audio.wav")}
           >
             <Volume2 className="h-4 w-4 mr-2" />
             Download TTS Audio
+          </Button>
+        )}
+
+        {outputs.ttsVideoPath && (
+          <Button
+            variant="outline"
+            className="w-full justify-start"
+            onClick={() => handleDownload(outputs.ttsVideoPath!, "video_with_tts_audio.mp4")}
+          >
+            <Video className="h-4 w-4 mr-2" />
+            Download Video with TTS Audio
           </Button>
         )}
       </CardContent>

@@ -58,9 +58,10 @@ export async function POST(request: NextRequest) {
       .replace(/\s+/g, ' ')  // Normalize whitespace
       .replace(/\d+\s*\d{2}:\d{2}:\d{2},\d{3}\s*-->\s*\d{2}:\d{2}:\d{2},\d{3}/g, '')  // Remove any remaining timestamps
       .trim()
-      .substring(0, 150) // Limit to 150 chars for better TTS quality
+      // NO character limit - process full text
 
-    log(`Generating TTS for cleaned text (${cleanText.length} chars): ${cleanText}`)
+    log(`Generating TTS for cleaned text (${cleanText.length} chars)`)
+    log(`Text preview: ${cleanText.substring(0, 100)}...`)
 
     if (!cleanText || cleanText.length < 10) {
       throw new Error('Insufficient text for TTS generation after cleaning')
@@ -129,11 +130,34 @@ export async function POST(request: NextRequest) {
 
       log(`TTS generation complete: ${ttsPath}`)
 
-      return NextResponse.json({
-        success: true,
-        ttsAudioPath: `/outputs/${ttsFilename}`,
-        message: 'TTS generated with IndexTTS2'
-      })
+      // Merge TTS audio with original video
+      log(`Merging TTS audio with video...`)
+      const mergedVideoFilename = `${baseFilename}_${targetLanguage}_tts_video.mp4`
+      const mergedVideoPath = join(outputsDir, mergedVideoFilename)
+      
+      try {
+        // Replace video's audio track with TTS audio
+        await execAsync(
+          `"${ffmpegPath}" -i "${videoPath}" -i "${ttsPath}" -c:v copy -map 0:v:0 -map 1:a:0 -shortest "${mergedVideoPath}" -y`,
+          { maxBuffer: 50 * 1024 * 1024 }
+        )
+        log(`Video merged with TTS audio: ${mergedVideoPath}`)
+        
+        return NextResponse.json({
+          success: true,
+          ttsAudioPath: `/outputs/${ttsFilename}`,
+          ttsVideoPath: `/outputs/${mergedVideoFilename}`,
+          message: 'TTS generated and merged with video'
+        })
+      } catch (mergeError: any) {
+        logError("Video merging failed, returning audio only", mergeError)
+        // Return audio even if merging fails
+        return NextResponse.json({
+          success: true,
+          ttsAudioPath: `/outputs/${ttsFilename}`,
+          message: 'TTS generated (video merge failed)'
+        })
+      }
     } catch (pythonError: any) {
       logError("IndexTTS2 generation failed", pythonError)
       throw pythonError

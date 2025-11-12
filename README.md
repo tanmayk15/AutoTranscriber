@@ -227,6 +227,8 @@ Perfect for content creators, video editors, accessibility teams, and language l
 
 ## 📦 Installation
 
+> **🚀 Quick Setup:** For detailed step-by-step installation instructions, see [SETUP.md](SETUP.md)
+
 ### Prerequisites
 
 - **Node.js** 18+ and npm
@@ -234,6 +236,39 @@ Perfect for content creators, video editors, accessibility teams, and language l
 - **Git**
 - **FFmpeg** 8.0+ (will be downloaded during setup)
 - **10GB+ free disk space** (for AI models)
+
+### Quick Start
+
+```bash
+# 1. Clone repository
+git clone https://github.com/tanmayk15/AutoTranscriber.git
+cd AutoTranscriber
+
+# 2. Setup frontend
+cd frontend
+npm install
+
+# 3. Setup Python backend
+cd ../auto-subtitle-main
+pip install -r requirements.txt
+
+# 4. Download FFmpeg (see SETUP.md for details)
+
+# 5. Run the application
+cd ../frontend
+npm run dev
+```
+
+### Detailed Installation
+
+For complete setup instructions including:
+- Virtual environment configuration
+- FFmpeg installation (Windows/Linux/Mac)
+- IndexTTS2 voice cloning setup
+- Troubleshooting common issues
+- Model download guides
+
+**👉 See [SETUP.md](SETUP.md) for the complete installation guide**
 
 ### Step 1: Clone Repository
 
@@ -244,6 +279,8 @@ cd AutoTranscriber
 
 ### Step 2: Frontend Setup
 
+**See [SETUP.md](SETUP.md) for detailed instructions.**
+
 ```bash
 cd frontend
 npm install
@@ -252,6 +289,8 @@ npm install
 This will install 440+ npm packages including Next.js, React, TypeScript, and all dependencies.
 
 ### Step 3: Python Backend Setup
+
+**See [SETUP.md](SETUP.md) for virtual environment setup.**
 
 ```bash
 cd ../auto-subtitle-main
@@ -745,6 +784,6 @@ This project integrates amazing open-source technologies:
 
 ### ⭐ If you find this project useful, please give it a star!
 
-Made with ❤️ by [Tanmay Kumar](https://github.com/tanmayk15)
+Made with ❤️ by [Tanmay Khodankar](https://github.com/tanmayk15)
 
 </div>

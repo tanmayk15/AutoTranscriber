@@ -204,13 +204,15 @@ export default function TranslationPanel({
       })
 
       onProgressChange(100)
-      onStepChange("TTS audio generated!")
+      onStepChange("TTS audio generated and merged with video!")
       onOutputsUpdate((prev: any) => ({
         ...prev,
         ttsAudioPath: response.data.ttsAudioPath,
+        ttsVideoPath: response.data.ttsVideoPath,
       }))
     } catch (error) {
       console.error("Error generating TTS:", error)
+      onStepChange("Error generating TTS")
     } finally {
       setTimeout(() => onProcessingChange(false), 1000)
     }

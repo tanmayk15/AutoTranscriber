@@ -57,3 +57,16 @@
     @apply bg-background text-foreground;
   }
 }
+
+/* Grid background pattern */
+.bg-grid-slate-200 {
+  background-image: linear-gradient(to right, rgb(226 232 240 / 0.2) 1px, transparent 1px),
+    linear-gradient(to bottom, rgb(226 232 240 / 0.2) 1px, transparent 1px);
+  background-size: 32px 32px;
+}
+
+.dark .bg-grid-slate-700 {
+  background-image: linear-gradient(to right, rgb(51 65 85 / 0.3) 1px, transparent 1px),
+    linear-gradient(to bottom, rgb(51 65 85 / 0.3) 1px, transparent 1px);
+  background-size: 32px 32px;
+}

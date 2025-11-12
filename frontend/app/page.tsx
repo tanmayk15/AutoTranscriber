@@ -1,6 +1,7 @@
 "use client"
 
 import { useState } from "react"
+import Link from "next/link"
 import VideoUpload from "@/components/video-upload"
 import ProcessingStatus from "@/components/processing-status"
 import SubtitleViewer from "@/components/subtitle-viewer"
@@ -8,6 +9,8 @@ import TranslationPanel from "@/components/translation-panel"
 import VideoPreview from "@/components/video-preview"
 import DownloadSection from "@/components/download-section"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
+import { Button } from "@/components/ui/button"
+import { Info } from "lucide-react"
 
 export default function Home() {
   const [videoFile, setVideoFile] = useState<File | null>(null)
@@ -39,13 +42,19 @@ export default function Home() {
     <main className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50 p-4 md:p-8">
       <div className="max-w-7xl mx-auto space-y-6">
         {/* Header */}
-        <div className="text-center space-y-2">
+        <div className="text-center space-y-4">
           <h1 className="text-4xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
             AutoTranscriber
           </h1>
           <p className="text-muted-foreground text-lg">
             AI-Powered Video Subtitling & Translation
           </p>
+          <Link href="/showcase">
+            <Button variant="outline" className="gap-2">
+              <Info className="h-4 w-4" />
+              View Features & Documentation
+            </Button>
+          </Link>
         </div>
 
         {/* Upload Section */}
