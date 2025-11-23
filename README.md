@@ -1,8 +1,16 @@
-# 🎬 AutoTranscriber
+# 🎬 FACE - Facial Authentication for Check-in Engine
+## AutoTranscriber
 
 [![AI-Powered](https://img.shields.io/badge/AI-Powered-blue?style=for-the-badge)](https://github.com/tanmayk15/AutoTranscriber)
 [![Next.js](https://img.shields.io/badge/Next.js-14-black?style=for-the-badge&logo=next.js)](https://nextjs.org/)
+[![React](https://img.shields.io/badge/React-18-61DAFB?style=for-the-badge&logo=react)](https://reactjs.org/)
 [![TypeScript](https://img.shields.io/badge/TypeScript-5.5-blue?style=for-the-badge&logo=typescript)](https://www.typescriptlang.org/)
+[![Python](https://img.shields.io/badge/Python-3.11-3776AB?style=for-the-badge&logo=python)](https://www.python.org/)
+[![FFmpeg](https://img.shields.io/badge/FFmpeg-8.0-007808?style=for-the-badge&logo=ffmpeg)](https://ffmpeg.org/)
+[![Tailwind CSS](https://img.shields.io/badge/Tailwind-3.4-38B2AC?style=for-the-badge&logo=tailwind-css)](https://tailwindcss.com/)
+[![Whisper](https://img.shields.io/badge/Whisper-AI-412991?style=for-the-badge&logo=openai)](https://openai.com/research/whisper)
+[![PyTorch](https://img.shields.io/badge/PyTorch-2.0-EE4C2C?style=for-the-badge&logo=pytorch)](https://pytorch.org/)
+[![Node.js](https://img.shields.io/badge/Node.js-18-339933?style=for-the-badge&logo=node.js)](https://nodejs.org/)
 [![License](https://img.shields.io/badge/License-MIT-green?style=for-the-badge)](LICENSE)
 
 > **Revolutionary subtitle generation, translation, and voice cloning powered by OpenAI Whisper, M2M100, and IndexTTS2**
@@ -335,6 +343,38 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ---
 
+## 📚 Research & Publications
+
+### Published Research Paper
+
+**Title:** AI-Powered Multilingual Dubbing: Revolutionizing Video Content Localization
+
+**Abstract:** This research paper presents a comprehensive study on the development and implementation of an AI-powered multilingual dubbing system that revolutionizes video content localization. The paper explores the integration of state-of-the-art AI models including OpenAI Whisper for speech recognition, Meta's M2M100 for neural machine translation, and IndexTTS2 for voice cloning. The system achieves 95%+ accuracy in transcription, 92% accuracy in translation across 100+ language pairs, and 94% emotion retention in voice cloning. The research demonstrates significant improvements in processing time (<2 minutes average), cost-effectiveness, and accessibility for content creators worldwide.
+
+**Key Contributions:**
+- Novel integration of Whisper, M2M100, and IndexTTS2 for end-to-end video localization
+- Real-time subtitle generation with automatic language detection
+- Context-aware neural machine translation preserving semantic meaning
+- Emotion-preserving voice cloning from minimal training data
+- Scalable architecture supporting 100+ languages
+
+**Published in:** International Journal of Scientific Research in Engineering and Management (IJSREM)
+
+**🔗 [Read Full Paper](https://ijsrem.com/download/ai-powered-multilingual-dubbing/)**
+
+**Citation:**
+```bibtex
+@article{khodankar2025face,
+  title={AI-Powered Multilingual Dubbing: Revolutionizing Video Content Localization},
+  author={Khodankar, Tanmay},
+  journal={International Journal of Scientific Research in Engineering and Management},
+  year={2025},
+  publisher={IJSREM}
+}
+```
+
+---
+
 ## 🙏 Acknowledgments
 
 - **OpenAI Whisper** - State-of-the-art speech recognition
@@ -349,7 +389,9 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 ## 📞 Support & Contact
 
 - **Issues**: [GitHub Issues](https://github.com/tanmayk15/AutoTranscriber/issues)
-- **Documentation**: [Wiki](https://github.com/tanmayk15/AutoTranscriber/wiki)
+- **Documentation**: [Complete Documentation (PDF)](FINAL%20FINAL.docx)
+- **Research Paper**: [IJSREM Publication](https://ijsrem.com/download/ai-powered-multilingual-dubbing/)
+- **Project Report**: [Video Translation Flow](Video%20Translation%20Flow%20Project.pdf)
 - **Email**: tanmayk15@example.com
 
 ---
