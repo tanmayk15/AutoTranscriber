@@ -1,5 +1,4 @@
-# 🎬 FACE - Facial Authentication for Check-in Engine
-## AutoTranscriber
+# AutoTranscriber 
 
 [![AI-Powered](https://img.shields.io/badge/AI-Powered-blue?style=for-the-badge)](https://github.com/tanmayk15/AutoTranscriber)
 [![Next.js](https://img.shields.io/badge/Next.js-14-black?style=for-the-badge&logo=next.js)](https://nextjs.org/)
@@ -392,7 +391,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 - **Documentation**: [Complete Documentation (PDF)](FINAL%20FINAL.docx)
 - **Research Paper**: [IJSREM Publication](https://ijsrem.com/download/ai-powered-multilingual-dubbing/)
 - **Project Report**: [Video Translation Flow](Video%20Translation%20Flow%20Project.pdf)
-- **Email**: tanmayk15@example.com
+- **Email**: tanmay.k1508@gmail.com
 
 ---
 
